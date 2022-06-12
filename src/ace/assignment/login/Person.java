@@ -1,6 +1,9 @@
 package ace.assignment.login;
 
 public class Person {
+		/**
+	 * 
+	 */
 		private String name, password, gender, email, address;
 
 		public String getName() {

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="">
+<form action="jspBean.jsp">
 	<div>
 		<span>Name</span>
 		<span>
@@ -18,7 +18,7 @@
 	<div>
 		<span>DOB</span>
 		<span>
-			<input type="date" name="birthday">
+			<input type="date" name="birth">
 		</span>
 	</div>
 	<br>
@@ -33,22 +33,22 @@
 	<div>
 		<span>Knowledge You May Know</span>
 		<span>
-			<input type="checkbox" name="html">HTML
-			<input type="checkbox" name="css" >CSS
-			<input type="checkbox" name="javascript" >JavaScript
-			<input type="checkbox" name="css" >jQuery
+			<input type="checkbox" name="knowledge" value="Html">HTML
+			<input type="checkbox" name="knowledge" value="CSS">CSS
+			<input type="checkbox" name="knowledge" value="JavaScript">JavaScript
+			<input type="checkbox" name="knowledge" value="jQuery">jQuery
 		</span>
 	</div>
 	<br>
 	<div>
-		<label for="cars">Choose a car:</label>
-			<select name="lang" id="lang">
-			  <option value="python">Python</option>
-			  <option value="java">Java</option>
+			<label>Choose one class you want to attend</label>
+			<select name="course" id="course">
+			  <option value="Python">Python</option>
+			  <option value="Java">Java</option>
 			</select>
 	</div>
 	<br>
-	<span style="padding-top: 10px; padding-left: 90px;"><input type="submit" value="Submit"></span>
-	<span style="padding-top: 10px; padding-left: 10px;"><input type="submit" value="Reset"></span>
+	<span style="padding-top: 10px; padding-left: 240px;"><input type="submit" value="Submit"></span>
+</form>
 </body>
 </html>
