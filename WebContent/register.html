@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Servlet Workout 1</title>
+</head>
+<body>
+<form action="register" method="post">
+	<div>
+		<span>Name</span>
+		<span>
+			<input type="text" name="name">
+		</span>
+	</div>
+	<br>
+	<div>
+		<span>DOB</span>
+		<span>
+			<input type="date" name="birthday">
+		</span>
+	</div>
+	<br>
+	<div>
+		<span>Gender</span>
+		<span>
+			<input type="radio" name="gender" value="Male">Male
+			<input type="radio" name="gender" value="Female">Female
+		</span>
+	</div>
+	<br>
+	<div>
+		<span>Subject</span>
+			<select name="subject" multiple>
+				<option value="java">Java</option>
+				<option value="php">Php</option>
+				<option value="andriod">Andriod</option>
+				<option value="asp">ASP</option>
+			</select>
+	</div>
+	<br>
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>
