@@ -20,7 +20,6 @@ import ace.project.model.StudentInfo;
 @WebServlet("/StudentController")
 public class StudentController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	StudentInfo info = new StudentInfo();
 	
 	public Student newStudent(HttpServletRequest request) {
 		Student student = new Student();
@@ -37,7 +36,7 @@ public class StudentController extends HttpServlet {
 	
 	public void createStudent(Student student,StudentInfo info,HttpServletRequest request) {
 		info.addStudent(student);
-		request.getSession().setAttribute("studentList", info);
+		request.getServletContext().setAttribute("studentList", info.getStudentList());
 	}
        
     /**
@@ -61,8 +60,10 @@ public class StudentController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
+		StudentInfo info = new StudentInfo();
 		StudentController controller = new StudentController();
 		Student student = controller.newStudent(request);
-		controller.createStudent(student, info,request);
+		controller.createStudent(student,info,request);
+		request.getRequestDispatcher("studentList.jsp").include(request, response);
 	}
 }
